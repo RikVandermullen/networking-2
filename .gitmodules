@@ -1,6 +1,0 @@
-[submodule "tcp/tcp-client"]
-	path = tcp/tcp-client
-	url = https://github.com/RikVandermullen/Networking-2
-[submodule "tcp/tcp-server"]
-	path = tcp/tcp-server
-	url = https://github.com/RikVandermullen/Networking-2
