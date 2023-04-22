@@ -8,7 +8,7 @@ pub fn main() -> std::io::Result<()> {
 
     println!("Connected to server! {}", stream.peer_addr().unwrap());
     
-    stream.write(b"Hello World!")?;
+    stream.write(b"Ping")?;
 
     let mut buffer = [0; 1024];
     let n: usize = stream.read(&mut buffer)?;

@@ -1,5 +1,5 @@
 use std::{net::{TcpListener, TcpStream}};
-use std::io::Read;
+use std::io::{Read, Write};
 
 fn handle_client(mut stream: TcpStream) {
     println!("New connection: {}", stream.peer_addr().unwrap());
@@ -9,6 +9,7 @@ fn handle_client(mut stream: TcpStream) {
         if n == 0 {
             break;
         }
+        stream.write(b"Pong").expect("Failed to write to stream");
         println!("Received: {}", String::from_utf8_lossy(&buffer[..n]));
     }
 }
