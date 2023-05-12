@@ -27,7 +27,7 @@ fn send_response(stream: &mut TcpStream, route: &str) {
     let status_line = "HTTP/1.1 200 OK";
 
     let mut file_path = format!(".{}", route);
-    if !route.ends_with(".js") && !route.ends_with(".css") {
+    if !route.contains(".") {
         file_path = format!("{}.html", file_path);
     }
 
