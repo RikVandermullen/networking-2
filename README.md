@@ -1,1 +1,3 @@
-# Networking-2
+# Networking 2
+
+Assignments from the lessons.
